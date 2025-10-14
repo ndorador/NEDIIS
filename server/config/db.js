@@ -4,7 +4,7 @@ import mysql from 'mysql2/promise';
 const dbConfig = {
   host: 'nediis.cl', // ej: 'sql101.yourhosting.com' o una IP
   user: 'nediiscl_kelmiis',     // ej: 'usuario_empresa'
-  password: 'Kelmiis.2935',
+  password: 'kelmiis.2935',
   database: 'nediiscl_orion' // ej: 'usuario_empresa_software_db'
 };
 

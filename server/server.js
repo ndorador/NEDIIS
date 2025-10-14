@@ -1,15 +1,29 @@
 import express from 'express';
-// Importamos la función para probar la conexión desde nuestro nuevo archivo
+import cors from 'cors'; 
+// Solo importamos lo necesario para este paso
 import { testConnection } from './config/db.js';
+import orderRoutes from './routes/orderRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import serviceRoutes from './routes/serviceRoutes.js'; 
+
 
 const app = express();
 const PORT = 5000;
 
-// Llamamos a la función para probar la conexión
+app.use(cors());
+app.use(express.json());
+
+// Llamamos a la función para probar la conexión al arrancar
 testConnection();
 
-app.get('/api/test', (req, res) => {
-  res.json({ message: '¡Hola desde el servidor!' });
+// Usamos las rutas de órdenes
+app.use('/api/orders', orderRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/services', serviceRoutes); 
+
+// Dejamos una ruta de prueba simple
+app.get('/', (req, res) => {
+  res.send('El servidor está funcionando correctamente.');
 });
 
 app.listen(PORT, () => {
