@@ -1,0 +1,38 @@
+/* client/src/components/layout/ImageSlider.css */
+
+.carousel-item {
+  height: 80vh; /* Altura del banner, ajústala a tu gusto */
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+.carousel-item img {
+  /* Asegura que la imagen cubra todo el espacio sin deformarse */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* La ponemos detrás del contenido */
+}
+
+.carousel-caption {
+  /* Centra el texto y le da más espacio */
+  bottom: 50%;
+  transform: translateY(50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para legibilidad */
+}
+
+/* Oscurece la imagen para que el texto resalte más */
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}

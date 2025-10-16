@@ -7,9 +7,7 @@ function Navbar({ cartItemCount = 0 }) {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         {/* Logo/Nombre de la Empresa */}
-        <Link className="navbar-brand" to="/">
-          Mi Empresa
-        </Link>
+        <Link className="navbar-brand" to="/">NEDIIS</Link>
 
         {/* Botón Hamburguesa para Móvil */}
         <button

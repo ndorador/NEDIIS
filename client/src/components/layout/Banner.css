@@ -1,0 +1,48 @@
+/* client/src/components/layout/Banner.css */
+.banner-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/images/banner-bg.jpg.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 70vh; /* Altura mínima para que sea impactante */
+  position: relative;
+  /* Asegura que el texto y botón estén centrados vertical y horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-section h1 {
+  font-size: 3.5rem; /* Tamaño de fuente más grande para el título */
+  line-height: 1.2;
+}
+
+.banner-section p {
+  font-size: 1.5rem; /* Tamaño de fuente para el párrafo */
+  max-width: 800px; /* Limita el ancho del párrafo para legibilidad */
+}
+
+/* Estilos para el botón, si quieres personalizarlos más allá de Bootstrap */
+.banner-section .btn-primary {
+  background-color: #007bff; /* Un azul primario de Bootstrap */
+  border-color: #007bff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.banner-section .btn-primary:hover {
+  background-color: #0056b3; /* Un azul más oscuro al pasar el ratón */
+  border-color: #0056b3;
+}
+
+/* Responsividad básica para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .banner-section {
+    min-height: 60vh;
+    padding: 3rem 0; /* Menos padding vertical en móviles */
+  }
+  .banner-section h1 {
+    font-size: 2.5rem;
+  }
+  .banner-section p {
+    font-size: 1.2rem;
+  }
+}
